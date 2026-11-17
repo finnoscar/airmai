@@ -3,283 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="How Airmai handles accounts, scores, location, Apple Watch heart-rate records and usage statistics.">
     <title>Airmai Privacy Policy</title>
-
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
-                         "Helvetica Neue", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
             max-width: 760px;
             margin: 0 auto;
             padding: 60px 24px 100px;
             line-height: 1.7;
             color: #1d1d1f;
-            background-color: #ffffff;
+            background: #fff;
         }
-
-        h1 {
-            font-size: 40px;
-            line-height: 1.15;
-            margin: 0 0 12px;
-            letter-spacing: -0.02em;
-        }
-
-        h2 {
-            font-size: 22px;
-            line-height: 1.3;
-            margin-top: 40px;
-            margin-bottom: 12px;
-        }
-
-        p {
-            font-size: 16px;
-            margin: 12px 0;
-        }
-
-        ul {
-            padding-left: 24px;
-        }
-
-        li {
-            font-size: 16px;
-            margin: 6px 0;
-        }
-
-        .updated {
-            color: #6e6e73;
-            margin-bottom: 36px;
-        }
-
-        .intro {
-            font-size: 17px;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            margin-top: 56px;
-            padding-top: 24px;
-            border-top: 1px solid #d2d2d7;
-            color: #6e6e73;
-            font-size: 14px;
-        }
-
+        h1 { font-size: 40px; line-height: 1.15; margin: 32px 0 12px; letter-spacing: -0.02em; }
+        h2 { font-size: 22px; line-height: 1.3; margin: 36px 0 12px; }
+        p, li { font-size: 16px; }
+        ul { padding-left: 24px; }
+        li { margin: 8px 0; }
+        .updated, footer { color: #6e6e73; }
+        .intro { font-size: 17px; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        nav { display: flex; flex-wrap: wrap; gap: 12px 20px; }
+        footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #d2d2d7; font-size: 14px; }
         @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #000000;
-                color: #f5f5f7;
-            }
-
-            .updated,
-            footer {
-                color: #a1a1a6;
-            }
-
-            footer {
-                border-color: #424245;
-            }
-
-            a {
-                color: #2997ff;
-            }
+            body { background: #000; color: #f5f5f7; }
+            .updated, footer { color: #a1a1a6; }
+            footer { border-color: #424245; }
+            a { color: #2997ff; }
         }
     </style>
 </head>
-
 <body>
-
+    <nav aria-label="Airmai links">
+        <a href="https://github.com/finnoscar/airmai">About Airmai</a>
+        <a href="https://testflight.apple.com/join/GEN6DdpC">TestFlight</a>
+        <a href="support.html">Support</a>
+        <a href="https://github.com/finnoscar/airmai/blob/main/PRIVACY.md" lang="zh-CN">简体中文</a>
+    </nav>
     <main>
-
         <h1>Airmai Privacy Policy</h1>
+        <p class="updated">Updated November 17, 2026</p>
+        <p class="intro">Airmai uses account information, game records and device capabilities to provide score viewing, synchronization, arcade discovery, chart tools and attendance records.</p>
 
-        <p class="updated">
-            Last Updated: August 16, 2026
-        </p>
+        <h2>Accounts and game records</h2>
+        <p>Account information and authorizations are used to request or synchronize records with the data service you select. Airmai stores account state, authorization information, record caches and preferences on your device. OAuth access and refresh tokens are saved in the system Keychain.</p>
+        <p>Services such as Diving-Fish, LXNS, MuNET and ScoreHub receive the requests required for their features. QR codes, friend codes and authorization links are processed through the synchronization flow you start. Each service handles information under its own policies and terms.</p>
 
-        <p class="intro">
-            Airmai respects your privacy. This Privacy Policy explains how
-            information is handled when you use Airmai.
-        </p>
+        <h2>Location and arcade searches</h2>
+        <p>After location permission is granted, Airmai uses your location to find nearby arcades and calculate distances. Nearby searches send latitude and longitude to Nearcade. Arcade search terms are sent with search requests. Apple Maps or your selected maps application handles map display and navigation.</p>
 
+        <h2>Camera, photos and files</h2>
+        <p>The camera reads machine QR codes. Images you select are used for app and widget backgrounds. Photo-library write permission is used when saving score images. Downloaded charts, audio and imported files are stored in the app directory. You control exports and sharing.</p>
 
-        <h2>1. Information We Collect</h2>
+        <h2>Apple Watch and health data</h2>
+        <p>With health authorization, attendance recording collects heart-rate samples and session times. Apple Watch transfers records to its paired iPhone, where they are stored locally and associated with song records when matching time information is available. Score summaries also synchronize from the phone to the watch.</p>
+        <p>Health records are processed on the device and its paired device. You can manage health authorization in system settings.</p>
 
-        <p>
-            Airmai does not actively collect, sell, or share your personal
-            information.
-        </p>
+        <h2>Usage statistics</h2>
+        <p>This release enables anonymous usage statistics by default to help understand device compatibility and commonly used features. The fields are limited to device model, operating-system and app version, feature identifiers, access and action counts, session times and duration. Statistics use an independent random installation identifier.</p>
+        <p>Statistics are sent to Airmai's statistics service over HTTPS. The pending queue is encrypted on the device. Raw events are retained for up to 30 days, and anonymous aggregates for up to 365 days.</p>
+        <p>For questions about statistics, authorizations or data handling, contact the maintainer using the address below. You choose which screenshots and reproduction details to include when sending feedback.</p>
 
-        <p>
-            Some features may require you to provide an API key, account
-            information, or other credentials for third-party services.
-            This information is used only to provide the features you request,
-            such as retrieving or synchronizing game records.
-        </p>
+        <h2>Local storage and platforms</h2>
+        <p>Airmai caches artwork, song catalogs, records and downloads. Keychain, system backups and health-data retention are managed by their respective system services. App removal and third-party authorization revocation are handled separately by iOS and the relevant service.</p>
+        <p>GitHub handles downloads and submitted issues under its privacy policy. Apple handles TestFlight installations, sessions, crashes and submitted feedback according to its TestFlight terms and privacy information.</p>
+        <p><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a> · <a href="https://testflight.apple.com/join/GEN6DdpC">Apple TestFlight information</a></p>
 
-
-        <h2>2. API Keys and Account Information</h2>
-
-        <p>
-            API keys and other credentials entered into Airmai are used only
-            to communicate with the third-party services selected by the user.
-        </p>
-
-        <p>
-            Unless explicitly stated otherwise, Airmai does not upload these
-            credentials to servers operated by the developer and does not use
-            them for purposes unrelated to the requested functionality.
-        </p>
-
-        <p>
-            Users are responsible for keeping their API keys and account
-            credentials secure.
-        </p>
-
-
-        <h2>3. Third-Party Services</h2>
-
-        <p>
-            Airmai may interact with third-party services, including:
-        </p>
-
-        <ul>
-            <li>Diving-Fish</li>
-            <li>LXNS</li>
-            <li>Nearcade</li>
-            <li>Other third-party services explicitly selected by the user</li>
-        </ul>
-
-        <p>
-            When you use features provided through these services, relevant
-            requests and data may be transmitted directly to those services.
-            Their handling of information is governed by their own privacy
-            policies and terms of service.
-        </p>
-
-        <p>
-            Airmai is an independent application and is not affiliated with
-            or endorsed by these third-party services or the developers and
-            publishers of the games referenced in the app, unless explicitly
-            stated otherwise.
-        </p>
-
-
-        <h2>4. Data Stored on Your Device</h2>
-
-        <p>
-            Airmai may store certain information locally on your device,
-            including:
-        </p>
-
-        <ul>
-            <li>API keys or authorization information</li>
-            <li>App preferences and settings</li>
-            <li>Cached song artwork and other media</li>
-            <li>Cached game records and related data</li>
-            <li>Practice mode settings</li>
-        </ul>
-
-        <p>
-            This information is stored primarily to provide app functionality,
-            improve performance, and reduce unnecessary network requests.
-        </p>
-
-        <p>
-            Deleting Airmai will generally remove locally stored app data.
-            However, information stored using certain iOS system services,
-            such as Keychain, may be handled according to Apple's system
-            behavior.
-        </p>
-
-
-        <h2>5. How Information Is Used</h2>
-
-        <p>
-            Information processed by Airmai is used only to provide features
-            such as:
-        </p>
-
-        <ul>
-            <li>Retrieving and displaying game records</li>
-            <li>Synchronizing data at the user's request</li>
-            <li>Displaying song, arcade, and related information</li>
-            <li>Saving user preferences and cached content</li>
-            <li>Providing and improving normal app functionality</li>
-        </ul>
-
-        <p>
-            Airmai does not use your information for advertising or tracking
-            and does not sell your personal information.
-        </p>
-
-
-        <h2>6. Data Security</h2>
-
-        <p>
-            Airmai takes reasonable measures to protect locally stored
-            information and credentials and uses security features provided
-            by iOS where appropriate.
-        </p>
-
-        <p>
-            However, no method of electronic storage or transmission over
-            the Internet can be guaranteed to be completely secure.
-        </p>
-
-
-        <h2>7. Children's Privacy</h2>
-
-        <p>
-            Airmai does not knowingly collect sensitive personal information
-            from children.
-        </p>
-
-        <p>
-            If you believe information has been handled in a manner
-            inconsistent with this Privacy Policy, please contact the
-            developer using the contact information below.
-        </p>
-
-
-        <h2>8. Changes to This Privacy Policy</h2>
-
-        <p>
-            This Privacy Policy may be updated when Airmai's features,
-            third-party integrations, or applicable requirements change.
-        </p>
-
-        <p>
-            Any changes will be published on this page, together with an
-            updated "Last Updated" date.
-        </p>
-
-
-        <h2>9. Contact</h2>
-
-        <p>
-            If you have any questions about this Privacy Policy, please contact:
-        </p>
-
-        <p>
-            Email:
-            <a href="mailto:finnoscar08@outlook.com">
-                finnoscar08@outlook.com
-            </a>
-        </p>
-
+        <h2>Contact and updates</h2>
+        <p>For privacy questions, email finnoscar08@outlook.com. This page and its date will be updated when app features or data-handling practices change.</p>
+        <p><a href="mailto:finnoscar08@outlook.com">Contact the maintainer</a></p>
     </main>
-
-    <footer>
-        © 2026 Airmai. All rights reserved.
-    </footer>
-
+    <footer>© 2026 Airmai. All rights reserved.</footer>
 </body>
 </html>

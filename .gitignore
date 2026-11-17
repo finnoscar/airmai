@@ -1,0 +1,9 @@
+.DS_Store
+*.ipa
+*.xcarchive/
+*.dSYM/
+*.mobileprovision
+*.p12
+*.p8
+*.key
+Payload/
